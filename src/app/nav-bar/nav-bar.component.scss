@@ -1,16 +1,43 @@
 .dropdown-menu {
-    padding: 0px;
-    margin-top: 8px;
-    margin-left: -65px;
-    min-width: 60px !important;
-    
-  }
-  .navbar{
-    background-color: #336BDB;
+  padding: 0px;
+  margin-top: 8px;
+  margin-left: -65px;
+  min-width: 60px !important;
+
+}
+
+nav {
+  padding: 0;
+  height: 60px;
+
+}
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+
+
+}
+
+.nav-link,
+.navbar-brand {
+  transition: 0.6s all ease-in-out;
+  padding: 15px;
+  padding-bottom: 0;
+  transition: 0.7s all ease-in-out;
+  padding-top: 5px;
+  color: #88B7C0;
+
+  color: i {
+    position: relative;
+    left: -3px;
+
   }
 
- 
-  .nav-link:hover  {
-    display: block;
-    background-color: #ddd;
-  }
+}
+
+.navbar-brand {
+  padding-bottom: 0px;
+  padding-top: 0;
+  transition: 0.7s all ease-in-out;
+
+}
