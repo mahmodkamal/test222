@@ -1,14 +1,10 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <nav class="navbar navbar-expand-lg navbar-light">
   
-        <a class="navbar-brand" href="#">
-         <img src="assets/images/megasoft.jpg" alt="Logo" style="width:40px;">
-       </a>
-    
-  <a class="nav-link" routerLink=""><i class="fa fa-home"></i>Home</a>
-  <a class="nav-link" routerLink="/profile"><i class="fa fa-search"></i>Search</a>
-  <a class="nav-link" routerLink="/contact"><i class="fa fa-info-circle"></i>Contact Us</a>
- 
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/megasoft.jpg" alt="Logo" style="width:40px;">
+      </a>
+   
   <button class="navbar-toggler" data-toggle="tooltip" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,7 +20,24 @@
                 <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign out</a>
               </div>
             </li>
+    
+    <ul class="navbar-nav">
+   
+     <a class="nav-link" routerLink=""><i class="fa fa-home"></i>Home</a>
+     <a class="nav-link" routerLink="/profile"><i class="fa fa-search"></i>Search</a>
+     <a class="nav-link" routerLink="/contact"><i class="fa fa-info-circle"></i>Contact Us</a>
+    
+   
       
     </ul>
   </div>
+  <li class="nav-item dropdown float right">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user"></i> 
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign in</a>
+        <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign out</a>
+      </div>
+    </li>
 </nav>

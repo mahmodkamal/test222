@@ -44,3 +44,9 @@ p {
 img {
   margin-top: 5px;
 }
+@media(max-width : 770px){
+  .col-md-10 {
+    width: 30%!important
+  }
+  .col-md-2{width: 70%!important;}
+}
