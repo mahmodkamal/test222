@@ -1,5 +1,6 @@
+import { SearchService } from './../services/search.service';
 import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { NgForm} from '@angular/forms';
 
 
 
@@ -13,23 +14,18 @@ export class SearchComponent implements OnInit {
   result:any;
   private Url='';
   searched = false;
-  constructor(private http:HttpClient) { 
+  constructor(private httpservice:SearchService) { 
 
   }
    
   ngOnInit() {
   }
-  Search(f){
+  Search(form: NgForm){
     
-    let query = f.value;
+    let query = form.value.search;
+    this.result=this.httpservice.search('/back/user/get_user/',query);
+    this.searched = true;
     console.log( query );
-    /*this.http.get( 'Url' + query ).subscribe( response =>{
-      console.log( response );
-      this.result = response;
-    })*/
-    //send requist with query
-    //here will exist the returned data from search
-    
   }
 
 }

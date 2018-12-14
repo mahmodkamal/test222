@@ -1,3 +1,5 @@
+import { HttpClientService } from './services/http/http-client.service';
+import { SearchService } from './services/search.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +21,7 @@ import { UserNameComponent } from './user-name/user-name.component';
 import { RouterModule } from '@angular/router';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -38,6 +41,7 @@ import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
     SearchResultComponent,
     SideComponent,
     UserNameComponent,
+    LoginComponent,
    
   ],
   imports: [
@@ -60,13 +64,17 @@ import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
         path: 'contact',
         component:ContactusComponent
        },
+       {
+        path: 'login',
+        component:LoginComponent
+       },
       {
         path: '**',
         component:NotFoundComponent
       }
     ])
   ],
-  providers: [],
+  providers: [SearchService,HttpClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

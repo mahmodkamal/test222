@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-<form #f="ngForm" (ngSubmit)="Search(f)">
+<form #form="ngForm" (ngSubmit)="Search(form)">
   <div class="container h-100">
       <div class="d-flex justify-content-center h-100">
         <div class="input-group">
             <div class="searchbar">
-                <input class="search_input" required  ngModel type="text" name="search" placeholder="Search...">
+                <input class="search_input" required  ngModel id="search" type="text" name="search" placeholder="Search...">
                 
                 <button class="btn btn-success search_icon" [disabled]="!f.valid">
                   <i class="fas fa-search"></i>
@@ -15,22 +15,18 @@
     </div>
     
 </form>
-<div class="jumbotron" >
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+<div class="jumbotron" *ngIf="searched">
+    <h1 class="display-4">{{result.}}</h1>
+    <p class="lead">{{result.}}</p>
     <hr class="my-4">
     <div class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">{{result}}</li>
+        <li class="list-group-item">{{result.}}</li>
+        <li class="list-group-item">{{result.}}</li>
       </ul>
     </div>
     <br>
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <form #f="ngForm" (ngSubmit)="submit(f)"> 
-      <p class="lead">
-            <button class="btn btn-primary btn-lg" role="button">Download Certficate</button>
-      </p>
-    </form>
+    <p>And here is your certficate.</p>
+            <a class="btn btn-primary btn-lg" >{{result.certUrl}}</a>
   </div>
