@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <form #form="ngForm" (ngSubmit)="Search(form)">
   <div class="container h-100">
-      <div class="d-flex justify-content-center h-100">
+    <div class="row">
+            <div class="d-flex justify-content-center h-100">
         <div class="input-group">
             <div class="searchbar">
                 <input class="search_input" required  ngModel id="search" type="text" name="search" placeholder="Search...">
@@ -13,20 +14,25 @@
         </div>
       </div>
     </div>
+
+    </div>
     
 </form>
-<div class="jumbotron" *ngIf="searched">
-    <h1 class="display-4">{{result.}}</h1>
-    <p class="lead">{{result.}}</p>
+<div class="jumbotron" >
+  <div *ngIf="result" >
+        <h1 class="display-4">{{result}}</h1>
+    <p class="lead">{{result}}</p>
     <hr class="my-4">
     <div class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">{{result}}</li>
-        <li class="list-group-item">{{result.}}</li>
-        <li class="list-group-item">{{result.}}</li>
+        <li class="list-group-item">{{result}}</li>
+        <li class="list-group-item">{{result}}</li>
       </ul>
     </div>
     <br>
     <p>And here is your certficate.</p>
             <a class="btn btn-primary btn-lg" >{{result.certUrl}}</a>
+  </div>
+
   </div>
