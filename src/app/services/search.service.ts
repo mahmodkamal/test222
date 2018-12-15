@@ -5,8 +5,9 @@ export class SearchService{
  constructor( private httpService :HttpClientService)
  {
  }
- public search(path:string,query:string)
+ public search(path:string,query:any)
  {
-    this.httpService.get(query);
+    return this.httpService.get( path , query)
+    
  }
 }

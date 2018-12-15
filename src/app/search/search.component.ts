@@ -11,7 +11,7 @@ import { NgForm} from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   @Output('search') search= new EventEmitter 
-  result:any;
+  result:any = {};
   private Url='';
   searched = false;
   constructor(private httpservice:SearchService) { 
@@ -22,10 +22,12 @@ export class SearchComponent implements OnInit {
   }
   Search(form: NgForm){
     
+    console.log(form)
     let query = form.value.search;
-    this.result=this.httpservice.search('/back/user/get_user/',query);
+    this.result=this.httpservice.search('/back/user/get_user/',{seach_word : query}).subscribe(res=>{
+      console.log(res)
+    });
     this.searched = true;
-    console.log( query );
   }
 
 }
