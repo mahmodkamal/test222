@@ -30,6 +30,8 @@ nav {
   color: i {
     position: relative;
     left: -3px;
+    padding :5px;
+  
 
   }
 
@@ -48,8 +50,15 @@ li{
       color: #000;
 
     }
+    
 }
-@media(max-width:770px){
+.navbar-nav{
+  a{
+    font-size: 20px;
+    padding-right: 100px;
+  }
+}
+@media(max-width:700px){
  .navbar-collapse {
     z-index: 410000000;
     background-color: #fff;

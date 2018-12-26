@@ -31,4 +31,7 @@ export class AuthService {
       return JSON.parse(localStorage.getItem('user')).access_token;
     }
   }
+  get isLogged() : Boolean {
+    return localStorage.getItem('user') ? true : false;
+  }
 }
