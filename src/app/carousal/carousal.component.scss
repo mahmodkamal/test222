@@ -2,15 +2,30 @@
   width: 784.66px;
   height: 427.81;
 
-  margin: 5em auto;
+  margin: 7em auto;
 
   background: #E7F1EA;
+}
+#carouselExampleControls{
+  margin-left: 35em;
+  margin-top: 10em;
+  padding: -20%;
+}
+
+.content{
+  padding-top: 100px;
+  margin-left: 27.75em;
+  margin-bottom: 0.9%;
+  background-color:lightgray;
+  width: 200px;
+  height:400px;
+  
 }
 
 .items {
   width: 50em;
 
-  background: #E7F1EA;
+  background: black;
 }
 
 #left,
@@ -19,12 +34,20 @@
 }
 
 img {
-  height: 450px !important;
+  height: 400px !important;
+  width: 720px  !important;
 
 
 }
-@media(max-width : 770px){
+@media(max-width : 500px){
 img {
   height: auto !important;
 }
+}
+
+.background{
+  width: 150em;
+  height: 33em;
+  padding-top: 20px;
+  background-color: gray; 
 }
