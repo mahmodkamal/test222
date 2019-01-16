@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
     
     console.log(form)
     let query = form.value.search;
-    this.result=this.httpservice.search('/back/user/get_user/',{seach_word : query}).subscribe(res=>{
+    this.result=this.httpservice.search('front/certficate/search_certficate/',{seach_word : query}).subscribe(res=>{
       console.log(res)
     });
     this.searched = true;
