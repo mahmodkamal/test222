@@ -9,7 +9,7 @@ import {urlSettings} from '../app/services/settings/urlSettings';
 urlSettings.Settings = {
   apiEndPoint : 'api/v1',
   apiHost : 'localhost',
-  apiPort : 4000,
+  apiPort : 8800,
   apiProtocol : 'http'
 }
 /*

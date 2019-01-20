@@ -19,20 +19,25 @@
     
 </form>
 <div class="jumbotron" >
-  <div *ngIf="result" >
-        <h1 class="display-4">{{result}}</h1>
-    <p class="lead">{{result}}</p>
+  <div *ngIf="searched" >
+        <h1 class="display-4">{{result.certificate_id}}</h1>
+    <p class="lead">{{result.user.name}}</p>
     <hr class="my-4">
     <div class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{result}}</li>
-        <li class="list-group-item">{{result}}</li>
-        <li class="list-group-item">{{result}}</li>
+        <li class="list-group-item">{{result.degree}}</li>
+        <li class="list-group-item">{{result.end_date}}</li>
+        <li class="list-group-item">{{result.start_date}}</li>
+        <li class="list-group-item">{{result.user.nation_id}}</li>
+        <li class="list-group-item">{{result.certificate_id}}</li>
       </ul>
     </div>
     <br>
     <p>And here is your certficate.</p>
-            <a class="btn btn-primary btn-lg" >{{result.certUrl}}</a>
+            <a class="btn btn-primary btn-lg" href="{{result.certificate_pdf}}" download >Download</a>
+  </div>
+  <div *ngIf="error">
+    <not-found></not-found>
   </div>
 
   </div>

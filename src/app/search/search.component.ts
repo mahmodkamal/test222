@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   result:any = {};
   private Url='';
   searched = false;
+  error  =false ;
   constructor(private httpservice:SearchService) { 
 
   }
@@ -24,10 +25,19 @@ export class SearchComponent implements OnInit {
     
     console.log(form)
     let query = form.value.search;
-    this.result=this.httpservice.search('front/certficate/search_certficate/',{seach_word : query}).subscribe(res=>{
-      console.log(res)
+    
+    this.httpservice.search(`front/certficate/search_certficate/${query}`).subscribe(res=>{
+      this.result = res.data;
+      console.log(this.result);
+      this.error = false;
+      this.searched = true;
+    },error=>{
+      this.error = true;
+      this.searched = !true;
+
     });
-    this.searched = true;
+    
+    
   }
 
 }

@@ -7,30 +7,35 @@
   background: #E7F1EA;
 }
 #carouselExampleControls{
-  margin-left: 35em;
+  margin-left: 31em;
   margin-top: 10em;
   padding: -20%;
+  max-width: 76%;
 }
 
 .content{
   padding-top: 100px;
-  margin-left: 27.75em;
-  margin-bottom: 0.9%;
+  margin-left: 49%;
+  margin-bottom: -4.1%;
   background-color:lightgray;
-  width: 200px;
-  height:400px;
+  width: 250px;
+  height:420px;
   
 }
-
+.repone{
+  width:61em;;
+  margin-left: -290%;
+  margin-top: 30%;
+  height: 30%;
+  background-color: black;
+  opacity: 0.5; 
+  padding-right: 120%;
+  padding-top: 8%;
+}
 .items {
   width: 50em;
 
   background: black;
-}
-
-#left,
-#right {
-  margin: 30px;
 }
 
 img {
@@ -39,14 +44,21 @@ img {
 
 
 }
-@media(max-width : 500px){
+
+.carouselExampleControls {
+  width: 4%;
+}
+.carousel-control-next-icon{
+  margin-right: 15%;
+}
+@media(max-width : 100px){
 img {
   height: auto !important;
 }
 }
 
 .background{
-  width: 150em;
+  width: 120em;
   height: 33em;
   padding-top: 20px;
   background-color: gray; 

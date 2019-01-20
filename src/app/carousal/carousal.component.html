@@ -21,7 +21,7 @@
    </div>
   </ng-template>
 </div> -->
-<div class="background">
+<div class="background" [style.background]="randColor?.dark">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -34,8 +34,12 @@
       <div class="carousel-item " *ngFor="let item of items ; index as i" [ngClass]="{'active' : i == 0}" >
         <img class="d-block w-100" src="{{item.name}}">
         <div class="carousel-caption d-none d-md-block">
-          <div class="content">
-            <h5 style="color:black;">{{item.text}}</h5>
+          
+          <div class="content" [style.background]="randColor?.light">
+            <h5 style=" font-size: 30px;" [style.color]="randColor?.text">{{item.text}}</h5>
+            <div class="repone">
+              <p>{{item.repone}}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -47,7 +51,6 @@
     </a>
     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
     </a>
   </div>
 </div>
