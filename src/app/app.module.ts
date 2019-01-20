@@ -22,6 +22,8 @@ import { RouterModule } from '@angular/router';
 import {Ng2CarouselamosModule} from 'ng2-carouselamos';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 
 
@@ -53,6 +55,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    PdfViewerModule,
     RouterModule.forRoot([
       { 
         path: '' ,
