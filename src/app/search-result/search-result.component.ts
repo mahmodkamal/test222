@@ -11,10 +11,12 @@ export class SearchResultComponent implements OnInit {
 
   ngOnInit() {
   }
-  Download(f)
-  {
+  Download(f) {
     //reaquest to download resource
     console.log(f);
+  }
+  submit(f) {
+
   }
 
 }
