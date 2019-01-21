@@ -1,13 +1,22 @@
-.content{
-    margin: 50px;
+.content {
+  margin: 50px;
 }
 
 .border {
-    border-width:1px !important;
-    width: 40%;
-    margin-top: 10%;
-    margin-left: 25%;
+  border-width: 1px !important;
+  width: 40%;
+  margin-top: 10%;
+  margin-left: 25%;
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }
-.field-item{
-    background-color: white;
+
+.field-item {
+  background-color: white;
 }
