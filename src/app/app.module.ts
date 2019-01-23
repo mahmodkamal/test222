@@ -43,7 +43,6 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     SearchResultComponent,
     SideComponent,
     UserNameComponent,
-    LoginComponent,
 
 
   ],

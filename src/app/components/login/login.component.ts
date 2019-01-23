@@ -23,15 +23,14 @@ export class LoginComponent extends formMange implements OnInit {
 
   createForm() {
     this.loginForm = new FormGroup({
-      email: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      nation_id: new FormControl('', Validators.required),
 
     })
     this.setForm(this.loginForm);
   }
 
   login() {
-    this.authService.login(this.FormValue).subscribe(res => {
+    this.authService.login({ email: this.FormValue.nation_id, password: this.FormValue.nation_id }).subscribe(res => {
 
       if (res.access_token) {
         this.authService.setUserInLocaleStorge(res);

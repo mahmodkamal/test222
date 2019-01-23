@@ -20,6 +20,9 @@ export class formMange {
         return this.form.controls[ControlName].touched && this.form.controls[ControlName].invalid
 
     }
+    isTouched(ControlName) {
+        return this.form.controls[ControlName].touched
+    }
 
     get isFormValid() {
         this.markAllFeildsTouched()
