@@ -23,7 +23,7 @@
         <h1 class="display-4">Name :{{result.user.name}}</h1>
     <p class="lead">National Id : {{result.user.nation_id}}</p>
     <hr class="my-4">
-    <div class="card" style="width: 18rem;">
+    <div *ngFor="let result of results" class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Course Degree : {{result.degree}}</li>
         <li class="list-group-item">Course End Date :{{result.end_date}}</li>

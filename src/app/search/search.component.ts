@@ -11,7 +11,7 @@ import { NgForm} from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   @Output('search') search= new EventEmitter 
-  result:any = {};
+  results:any = {};
   private Url='';
   searched = false;
   error  =false ;
@@ -27,8 +27,8 @@ export class SearchComponent implements OnInit {
     let query = form.value.search;
     
     this.httpservice.search(`front/certficate/search_certficate/${query}`).subscribe(res=>{
-      this.result = res.data;
-      console.log(this.result);
+      this.results = res.data;
+      console.log(this.results);
       this.error = false;
       this.searched = true;
     },error=>{
