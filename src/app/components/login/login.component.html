@@ -7,18 +7,18 @@
         <div class="alert alert-danger" *ngIf="dataIsNotValid">
           {{dataIsNotValid}}
         </div>
-        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+        <!-- <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
           <input formControlName="email" class="input100" type="text" name="email">
           <span class="focus-input100" data-placeholder="email"></span>
         </div>
         <p *ngIf="isFieldValid('email')">
           email is reqierd
-        </p>
+        </p> -->
         <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-          <input formControlName="password" class="input100" type="password" name="pass">
-          <span class="focus-input100" data-placeholder="Password"></span>
+          <input formControlName="nation_id" class="input100" name="pass">
+          <span *ngIf="!isTouched('nation_id')" class="focus-input100" data-placeholder="nation_id"></span>
         </div>
-        <p *ngIf="isFieldValid('password')">
+        <p *ngIf="isFieldValid('nation_id')">
           this feild is reqierd
         </p>
         <div class="container-login100-form-btn">
