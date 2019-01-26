@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: './components/login/login.module#LoginModule'
   },
   {
+    path: 'posts',
+    loadChildren: './components/posts/posts.module#PostsModule'
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }
