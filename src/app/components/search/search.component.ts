@@ -10,15 +10,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-<<<<<<< HEAD:src/app/search/search.component.ts
   @Output('search') search= new EventEmitter 
-  results:any = {};
+  results: Array<any> = [];
   private Url='';
-=======
-  @Output('search') search = new EventEmitter
-  result: any = {};
-  private Url = '';
->>>>>>> 451491d0009d94defb82893eebc20855ef720eb2:src/app/components/search/search.component.ts
+ 
+  
+  private URL = '';
   searched = false;
   error = false;
   constructor(private httpservice: SearchService) {
@@ -31,23 +28,17 @@ export class SearchComponent implements OnInit {
 
     console.log(form)
     let query = form.value.search;
-<<<<<<< HEAD:src/app/search/search.component.ts
-    
-    this.httpservice.search(`front/certficate/search_certficate/${query}`).subscribe(res=>{
-      this.results = res.data;
-      console.log(this.results);
-=======
 
     this.httpservice.search(`front/certficate/search_certficate/${query}`).subscribe(res => {
-      this.result = res.data;
-      console.log(this.result);
->>>>>>> 451491d0009d94defb82893eebc20855ef720eb2:src/app/components/search/search.component.ts
+      this.results = res.data;
+      console.log(this.results);
+
       this.error = false;
       this.searched = true;
     }, error => {
       this.error = true;
       this.searched = !true;
-
+      console.log('not found');
     });
 
 

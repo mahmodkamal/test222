@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class NavBarComponent implements OnInit {
   @Output('logout') onLogOut = new EventEmitter();
-  constructor(private _auth: AuthService) { }
+  constructor(public _auth: AuthService) { }
 
   ngOnInit() {
   }

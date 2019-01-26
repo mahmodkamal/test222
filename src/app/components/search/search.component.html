@@ -18,33 +18,40 @@
     </div>
     
 </form>
-<div class="jumbotron" >
-  <div *ngIf="searched" >
-        <h1 class="display-4">Name :{{result.user.name}}</h1>
-    <p class="lead">National Id : {{result.user.nation_id}}</p>
-    <hr class="my-4">
-    <div *ngFor="let result of results" class="card" style="width: 18rem;">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Course Degree : {{result.degree}}</li>
-        <li class="list-group-item">Course End Date :{{result.end_date}}</li>
-        <li class="list-group-item">Course Start Date : {{result.start_date}}</li>
-        <li class="list-group-item">Certificate Id : {{result.certificate_id}}</li>
-      </ul>
-    </div>
-    <br>
-    <p>And here is your certficate.</p>  
-            <a class="btn btn-primary btn-lg" href="{{result.certificate_pdf}}" download >Download</a>
-            <pdf-viewer [src]="result.certificate_pdf"
-            [render-text]="true"
-            [original-size]="false"
-            [zoom]="0.12"
-            [fit-to-page]="true"
-            style="display: block; width: 50%; height: 50%;"  
-  >
-</pdf-viewer>
-  </div>
-  <div *ngIf="error">
-    <not-found></not-found>
-  </div>
-
-  </div>
+<div class="cont">
+    <div class="jumbotron"*ngFor="let result of results" >
+        <div *ngIf="searched" >
+         
+              <h1 class="display-4">Name :{{result.user.name}}</h1>
+          <p class="lead">National Id : {{result.user.nation_id}}</p>
+          <hr class="my-4">
+          <div  class="card" style="width: 18rem;">
+              <div class="pdf">
+                  <pdf-viewer [src]="result.certificate_pdf"
+                    [render-text]="true"
+                    [original-size]="false"
+                    [fit-to-page]="true"
+                    [page]=1
+                    [show-all]="false"
+                    style="display: block; width: 200px; height: 200px;"  >
+                  </pdf-viewer>
+               </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Course Degree : {{result.degree}}</li>
+              <li class="list-group-item">Course End Date :{{result.end_date}}</li>
+              <li class="list-group-item">Course Start Date : {{result.start_date}}</li>
+              <li class="list-group-item">Certificate Id : {{result.certificate_id}}</li>
+            </ul>
+          </div>
+          <br>
+          <p>And here is your certficate.</p>  
+                  <a class="btn btn-primary btn-lg" href="{{result.certificate_pdf}}" download >Download</a>
+                
+        </div>
+        <div *ngIf="error">
+          <not-found></not-found>
+        </div>
+      
+        </div>
+      
+</div>
