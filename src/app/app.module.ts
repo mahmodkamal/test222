@@ -22,6 +22,7 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PostsService } from './services/posts.service';
 
 
 
@@ -56,7 +57,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     PdfViewerModule,
     AppRoutingModule
   ],
-  providers: [SearchService, HttpClientService],
+  providers: [SearchService, HttpClientService, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
