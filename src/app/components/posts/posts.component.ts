@@ -8,8 +8,9 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostsComponent implements OnInit {
 
-
+  p: number = 1;
   Posts: Array<any>;
+  total: number = 0;
   constructor(private _postService: PostsService) { }
 
   ngOnInit() {
@@ -18,7 +19,13 @@ export class PostsComponent implements OnInit {
   getALlPosts(body?) {
     this._postService.getAllPosts(body).subscribe(res => {
       this.Posts = res.data.data;
-      console.log(res)
+      this.total = res.data.total;
+      this.p = res.data.current_page;
+
     })
+  }
+  ChangePage($event) {
+    this.p = $event;
+    this.getALlPosts({ page: $event })
   }
 }
