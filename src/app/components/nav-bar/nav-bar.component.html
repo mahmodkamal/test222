@@ -19,7 +19,7 @@
       </a>
       <a class="nav-link" routerLink=""><i class="fa fa-home"></i> Home</a>
       <a class="nav-link" routerLink="/profile"><i class="fa fa-search"></i> Verify</a>
-      <a class="nav-link" routerLink="/posts"><i class="fa fa-info-circle"></i> posts </a>
+      <!-- <a class="nav-link" routerLink="/posts"><i class="fa fa-info-circle"></i> posts </a> -->
 
       <a class="nav-link" routerLink="/contact"><i class="fa fa-info-circle"></i> Contact Us</a>
 
@@ -27,18 +27,14 @@
 
     </ul>
   </div>
-  <li class="nav-item dropdown float right" *ngIf="_auth.isLogged">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
-      <i class="fa fa-user"></i>
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign in</a>
-      <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign out</a>
-    </div>
-  </li>
+
   <li *ngIf="!_auth.isLogged">
     <a class="nav-link" routerLink="/login">login</a>
 
   </li>
+  <!-- <li *ngIf="_auth.isLogged">
+    <a class="nav-link" routerLink="/login"> <i class="fa fa-user"></i>
+    </a>
+
+  </li> -->
 </nav>

@@ -71,3 +71,20 @@ img {
   padding-top: 20px;
   background-color: gray;
 }
+
+@media(max-width : 770px) {
+  img {
+    height: 220px !important;
+
+  }
+
+  .background {
+    height: 18em !important;
+    ;
+
+  }
+
+  #carouselExampleControls {
+    margin-top: 5em !important;
+  }
+}

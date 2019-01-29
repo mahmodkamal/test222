@@ -86,3 +86,19 @@ li {
 
 
 }
+
+@media(max-width : 770px) {
+  .navbar-toggler-icon {
+    background-color: #fff !important;
+  }
+
+  .navbar-collapse {
+    background-color: #000 !important;
+  }
+
+  .navbar-nav {
+    margin: 0 !important;
+    text-align: center;
+    width: 100% !important;
+  }
+}

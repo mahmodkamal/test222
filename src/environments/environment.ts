@@ -6,13 +6,17 @@ export const environment = {
   production: false
 };
 import { urlSettings } from '../app/services/settings/urlSettings';
+// urlSettings.Settings = {
+//   apiEndPoint: 'api/v1',
+//   apiHost: '127.0.0.1',
+//   apiPort: 7000,
+//   apiProtocol: 'http'
+// }
 urlSettings.Settings = {
   apiEndPoint: 'api/v1',
-  apiHost: '127.0.0.1',
-  apiPort: 7000,
+  apiHost: 'backend.cambridgeuniv.uk',
   apiProtocol: 'http'
 }
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

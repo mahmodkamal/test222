@@ -62,4 +62,28 @@ img {
   .col-md-2 {
     width: 70% !important;
   }
+
+  .footers {
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 0;
+
+  }
+
+  li {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .cam-footer-navigation,
+  .footers-five {
+    width: 100% !important;
+  }
+
+  p,
+  a {
+    padding: 0 !important;
+  }
 }

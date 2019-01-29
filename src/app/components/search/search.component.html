@@ -1,59 +1,56 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  crossorigin="anonymous">
 <form #form="ngForm" (ngSubmit)="Search(form)">
   <div class="container h-100">
     <div class="row">
-            <div class="d-flex justify-content-center h-100">
+      <div class="d-flex justify-content-center h-100">
         <div class="input-group">
-            <div class="searchbar">
-                <input class="search_input" required  ngModel id="search" type="text" name="search" placeholder="Search...">
-                
-                <button class="btn btn-success search_icon" [disabled]="!form.valid">
-                  <i class="fas fa-search"></i>
-                </button>
+          <div class="searchbar">
+            <input class="search_input" required ngModel id="search" type="text" name="search" placeholder="Search...">
+
+            <button class="btn btn-success search_icon" [disabled]="!form.valid">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    </div>
-    
+  </div>
+
 </form>
 <div class="cont">
-    <div class="jumbotron"*ngFor="let result of results" >
-        <div *ngIf="searched" >
-         
-              <h1 class="display-4">Name :{{result.user.name}}</h1>
-          <p class="lead">National Id : {{result.user.nation_id}}</p>
-          <hr class="my-4">
-          <div  class="card" >
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                  <div class="pdf">
-                      <pdf-viewer [src]="result.certificate_pdf"
-                        [render-text]="true"
-                        [original-size]="false"
-                        [fit-to-page]="true"
-                        [page]=1
-                        [show-all]="false"
-                        style="display: block; width: 100%; height: 100%;"  >
-                      </pdf-viewer>
-                   </div>
-              </li>
-              <li class="list-group-item">Course Degree : {{result.degree}}</li>
-              <li class="list-group-item">Course End Date :{{result.end_date}}</li>
-              <li class="list-group-item">Course Start Date : {{result.start_date}}</li>
-              <li class="list-group-item">Certificate Id : {{result.certificate_id}}</li>
-            </ul>
-          </div>
-          <br>
-          <p>And here is your certficate.</p>  
-                  <a class="btn btn-primary btn-lg" href="{{result.certificate_pdf}}" download >Download</a>
-                
-        </div>
-        <div *ngIf="error">
-          <not-found></not-found>
-        </div>
-      
-        </div>
-      
+  <div class="jumbotron" *ngFor="let result of results">
+    <div *ngIf="searched">
+
+      <h1 class="display-4">Name :{{result.user.name}}</h1>
+      <p class="lead">National Id : {{result.user.nation_id}}</p>
+      <hr class="my-4">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="pdf">
+              <pdf-viewer [src]="result.certificate_pdf" [render-text]="true" [original-size]="false" [fit-to-page]="true"
+                [page]=1 [show-all]="false" style="display: block; width: 100%; height: 100%;">
+              </pdf-viewer>
+            </div>
+          </li>
+          <li class="list-group-item">Course Degree : {{result.degree}}</li>
+          <li class="list-group-item">Course End Date :{{result.end_date}}</li>
+          <li class="list-group-item">Course Start Date : {{result.start_date}}</li>
+          <li class="list-group-item">Certificate Id : {{result.certificate_id}}</li>
+        </ul>
+      </div>
+      <br>
+      <div class="foot">
+        <p>And here is your certficate.</p>
+        <a class="btn btn-primary btn-lg" href="{{result.certificate_pdf}}" download>Download</a>
+      </div>
+    </div>
+    <div *ngIf="error">
+      <not-found></not-found>
+    </div>
+
+  </div>
+
 </div>
