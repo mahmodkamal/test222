@@ -8,9 +8,14 @@ import { MaterialsService } from 'src/app/services/materials.service';
 })
 export class MaterialsComponent implements OnInit {
   material :Array<any> = [];
+  category :Array<any>=[];
+  catname :any= [];
   constructor(private mService :MaterialsService) { }
 
   ngOnInit() {
+    this.mService.getCategories().subscribe(res=>{
+      this.category = res;
+    });
     this.mService.getUserMaterial().subscribe(res=>{
       this.material = res;
       console.log(this.material);

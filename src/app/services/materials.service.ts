@@ -9,7 +9,11 @@ export class MaterialsService {
   constructor(private http:HttpClientService) { }
   getUserMaterial()
   {
-    return this.http.get('material/getUserMaterial');
+    return this.http.get('back/material/getmaterial');
+  }
+  getCategories()
+  {
+    return this.http.get('back/category/getCategory ');
   }
 
 }
