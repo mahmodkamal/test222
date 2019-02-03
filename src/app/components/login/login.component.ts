@@ -30,7 +30,7 @@ export class LoginComponent extends formMange implements OnInit {
   }
 
   login() {
-    this.authService.login({ email: this.FormValue.nation_id, password: this.FormValue.nation_id }).subscribe(res => {
+    this.authService.login({ nation_id: this.FormValue.nation_id }).subscribe(res => {
 
       if (res.access_token) {
         this.authService.setUserInLocaleStorge(res);
