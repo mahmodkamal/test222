@@ -11,7 +11,7 @@ urlSettings.Settings = {
   apiHost: '127.0.0.1',
   apiPort: 8000,
   apiProtocol: 'http',
-  language:'en'
+  language : 'en'
 }
 // urlSettings.Settings = {
 //   apiEndPoint: 'api/v1',
