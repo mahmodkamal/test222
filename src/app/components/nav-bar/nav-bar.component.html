@@ -4,7 +4,7 @@
 
 
 
-  <button class="navbar-toggler" data-toggle="tooltip" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+  <button id="close" class="navbar-toggler" data-toggle="tooltip" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,21 +17,19 @@
       <a class="navbar-brand" href="">
         <img src="https://www.cam.ac.uk/sites/www.cam.ac.uk/files/logo.png" alt="Logo" style="width:170px; height: 40px;">
       </a>
-      <a class="nav-link" routerLink=""><i class="fa fa-home"></i> Home</a>
-      <a class="nav-link" routerLink="/profile"><i class="fa fa-search"></i> Verify</a>
-      <a class="nav-link" routerLink="/posts"><i class="fa fa-info-circle"></i> posts </a>
-      <a class="nav-link" routerLink="/materials"><i class="fa fa-info-circle"></i>materials</a>
-      <a class="nav-link" routerLink="/contact"><i class="fa fa-info-circle"></i> Contact Us</a>
+      <a (click)="close()"  class="nav-link" routerLink=""><i class="fa fa-home"></i> Home</a>
+      <a (click)="close()"  class="nav-link" routerLink="/profile"><i class="fa fa-search"></i> Verify</a>
+      <a (click)="close()"  class="nav-link" routerLink="/posts"><i class="fa fa-info-circle"></i> posts </a>
+      <a (click)="close()" *ngIf="_auth.isLogged"class="nav-link" routerLink="/materials"><i class="fa fa-info-circle"></i>materials</a>
+      <a (click)="close()" class="nav-link" routerLink="/contact"><i class="fa fa-info-circle"></i> Contact Us</a>
+      <a (click)="close()" *ngIf="!_auth.isLogged" class="nav-link" routerLink="/login">login</a>
 
 
 
     </ul>
   </div>
 
-  <li *ngIf="_auth.isLogged">
-    <a class="nav-link" routerLink="/login">login</a>
 
-  </li>
   <!-- <li *ngIf="_auth.isLogged">
     <a class="nav-link" routerLink="/login"> <i class="fa fa-user"></i>
     </a>

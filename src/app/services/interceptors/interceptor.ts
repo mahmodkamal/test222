@@ -32,6 +32,7 @@ export class Interceptor implements HttpInterceptor {
     /**
      * if token exits will be added to request headers
      */
+    console.log(this.authService.getTokenFromLocaleStorge())
     if (this.authService.getTokenFromLocaleStorge()) {
       appReq = appReq.clone({
         setHeaders: {

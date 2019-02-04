@@ -1,8 +1,9 @@
+import { Interceptor } from './services/interceptors/interceptor';
 import { HttpClientService } from './services/http/http-client.service';
 import { SearchService } from './services/search.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -61,7 +62,13 @@ import { MaterialsComponent } from './components/materials/materials.component';
     PdfViewerModule,
     AppRoutingModule
   ],
-  providers: [SearchService, HttpClientService, PostsService],
+  providers: [SearchService, HttpClientService, PostsService , 
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

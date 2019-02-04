@@ -13,5 +13,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  close(){
+document.getElementById('close').click();
+  }
 }

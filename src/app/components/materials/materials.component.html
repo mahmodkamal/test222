@@ -1,8 +1,15 @@
 <div class="borderr">
+   
   <article class="node-202502 node node-news view-mode-what_is_happening clearfix cam-vertical-teaser cam-teaser" *ngFor="let mat of Usermaterial.message">
+  <div class="content"> 
+      <h3>Category: {{Usermaterial.data}}</h3>
     <p>
-     {{mat.outline}}
-    </p>
-    <a class="btn btn-primary btn-lg" href="{{mat.url}}" download>Download Material</a>
+     OutLine: {{mat.outline}}
+     </p>
+     <p class="right">
+       Date: {{mat.created_at}}
+     </p>
+     <a class="btn btn-primary btn-lg" href="{{mat.url}}" download>Download Material</a>
+  </div>
   </article><!-- /.node -->
 </div>
