@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PostsService } from './services/posts.service';
+import { MaterialsComponent } from './components/materials/materials.component';
+
 
 
 
@@ -44,6 +46,8 @@ import { PostsService } from './services/posts.service';
     SearchResultComponent,
     SideComponent,
     UserNameComponent,
+   
+    
 
 
   ],

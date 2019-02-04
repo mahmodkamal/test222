@@ -3,7 +3,7 @@ export interface Settings {
     apiHost: string,
     apiPort?: number,
     apiEndPoint: string,
-    language?: string,
+    language: string,
     requestTimeout?: number,
     cookieHeader?: boolean,
     allowOffline?: boolean,

@@ -28,6 +28,11 @@ const routes: Routes = [
     loadChildren: './components/posts/posts.module#PostsModule'
   },
   {
+    path:'materials',
+    loadChildren: './components/materials/materials.module#MaterialsModule'
+
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }
