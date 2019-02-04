@@ -11,9 +11,9 @@ export class MaterialsService {
   {
     return this.http.get('back/material/getmaterial');
   }
-  getCategories()
+  getUserMaterials(user_id)
   {
-    return this.http.get('back/category/getCategory ');
+    return this.http.post({'id' : user_id},'back/material/get_User_Material');
   }
-
+  
 }

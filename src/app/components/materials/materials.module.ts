@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth/auth.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +13,8 @@ import { MaterialsService } from 'src/app/services/materials.service';
     MaterialRoutingModule
   ],
   providers: [
-   MaterialsService
+   MaterialsService,
+   AuthService
   ]
 
 })

@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { MaterialsService } from 'src/app/services/materials.service';
 
@@ -8,18 +9,26 @@ import { MaterialsService } from 'src/app/services/materials.service';
 })
 export class MaterialsComponent implements OnInit {
   material :Array<any> = [];
+  Usermaterial :Array<any> = [];
   category :Array<any>=[];
+  user :any;
+  userId :number;
   catname :any= [];
-  constructor(private mService :MaterialsService) { }
+  constructor(private mService :MaterialsService,private authSer :AuthService) { }
 
   ngOnInit() {
-    this.mService.getCategories().subscribe(res=>{
-      this.category = res;
-    });
+    this.user = this.authSer.getUserFromLocaleStorge();
+    console.log(this.user.user.id);
+    this.userId = this.user.user.id;
     this.mService.getUserMaterial().subscribe(res=>{
       this.material = res;
       console.log(this.material);
     })
+    this.mService.getUserMaterials(this.user.user.id).subscribe(res=>{
+      this.Usermaterial = res;
+      console.log(this.Usermaterial);
+    });
+   
   }
 
 }

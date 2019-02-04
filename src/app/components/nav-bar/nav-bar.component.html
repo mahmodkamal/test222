@@ -28,7 +28,7 @@
     </ul>
   </div>
 
-  <li *ngIf="!_auth.isLogged">
+  <li *ngIf="_auth.isLogged">
     <a class="nav-link" routerLink="/login">login</a>
 
   </li>
